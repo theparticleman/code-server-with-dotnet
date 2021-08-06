@@ -26,4 +26,4 @@ jobs:
       run: docker build . --file Dockerfile --tag theparticleman/code-server-with-dotnet:${{github.run_number}} --tag theparticleman/code-server-with-dotnet:latest
       
     - name: Publish Docker image
-      run: docker push --all-tags
+      run: docker push --all-tags theparticleman/code-server-with-dotnet
