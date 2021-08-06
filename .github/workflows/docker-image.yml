@@ -23,7 +23,7 @@ jobs:
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag theparticleman/code-server-with-dotnet:${{github.run_number}}
+      run: docker build . --file Dockerfile --tag theparticleman/code-server-with-dotnet:${{github.run_number}} --tag theparticleman/code-server-with-dotnet:latest
       
     - name: Publish Docker image
-      run: docker push theparticleman/code-server-with-dotnet:${{github.run_number}}
+      run: docker push --all-tags
