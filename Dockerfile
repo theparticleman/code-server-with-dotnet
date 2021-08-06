@@ -1,4 +1,4 @@
-FROM linuxserver/code-server
+FROM linuxserver/code-server:version-v3.11.0
 
 RUN apt-get update
 RUN apt-get install wget
